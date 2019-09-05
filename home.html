@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="public/stylesheet.css">
+</head>
+<body>
+
+<h2>OAUTH with Salesforce</h2>
+<p>Click on the buttons test the Oauth flows:</p>
+
+<div class="tab">
+<button class="tablinks" onclick="openCity(event, 'WSflow')">Web Server</button>
+<button class="tablinks" onclick="openCity(event, 'UNPSflow')">Username Password</button>
+<button class="tablinks" onclick="openCity(event, 'JWTflow')">JWT</button>
+</div>
+
+<div id="WSflow" class="tabcontent">
+<h3>Web Server flow</h3>  <br/>
+<button class="tablinks" onclick="startWSFlow()">Start</button><br/><br/>
+
+<div id="WSFlowBlock" class="tabcontent">
+  Enter Client Id: <input type="text" name="clientid" id="clientid"><br>
+  <!--Enter UserName: <input type="text" name="username"><br/>
+  Enter Password: <input type="text" name="password"><br/>-->
+ <button class="tablinks" onclick="authoriseWS()">Submit</button>
+ <div>
+  <p>authorisationcode code received:</p>
+  <p id="authorisationcode"></p>
+</div>
+</div > 
+
+<div id="WSFlowDataBlock" class="tabcontent">
+ <button class="tablinks" onclick="getAccessToken()">GetAccessToken</button>
+ <div>
+    Enter Client Secret: <input type="text" name="client_secret" id="client_secret"><br>
+  <p>access toke received:</p>
+  <p id="accesstoken"></p>
+</div>
+
+
+
+
+
+<div id="UNPSflow" class="tabcontent">
+<h3>UserName Password flow</h3>  
+</div>
+
+<div id="JWTflow" class="tabcontent">
+<h3>JWT flow</h3>  
+</div>
+
+</body>
+
+<script type="text/javascript" src="public/script.js"></script>
+</html> 
